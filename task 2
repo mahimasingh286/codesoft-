@@ -1,0 +1,21 @@
+x = float(input("Enter the first number: "))  
+y = float(input("Enter the second number: "))
+z= (input(" select the operation:\n"
+            " +\n"
+              " -\n"
+              "*\n"
+              "/\n" ))
+if z == "+":
+   result = x+y
+   print("result:", result)
+elif z == "-":
+   result = x-y
+   print("result:", result)
+elif z == "*":
+   result = x*y
+   print("result:", result)
+elif z == "/":
+   result = x/y
+   print("result:", result)
+else:
+   print("invalid input")
