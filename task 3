@@ -1,0 +1,18 @@
+import random
+letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers = "0123456789"
+symbols = "!@#$%&*+"
+user_input = int(input("Enter the total length of the password: "))
+num_letters = user_input   
+num_numbers = user_input   
+num_symbols = user_input - (num_letters + num_numbers)  
+password_list = []
+for _ in range(num_letters):
+    password_list.append(random.choice(letters))
+for _ in range(num_numbers):
+    password_list.append(random.choice(numbers))
+for _ in range(num_symbols):
+    password_list.append(random.choice(symbols))
+random.shuffle(password_list)
+password = ''.join(password_list)
+print("Generated password:", password)
